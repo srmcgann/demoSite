@@ -35,7 +35,7 @@
   $sql = "SELECT * FROM links WHERE id = $id";
   $res = mysqli_query($link, $sql);
   $row = mysqli_fetch_assoc($res);
-  $src = str_replace("'","'", $row['code']);
+  $src = str_replace("'","`", $row['code']);
 ?>
 <!DOCTYPE html>
 <html>
